@@ -1,0 +1,1 @@
+{"name":"Radio Golden Hour","short_name":"Golden Hour","description":"Live local radio from wherever the sun is setting.","start_url":"./","scope":"./","display":"standalone","background_color":"#2b1f4a","theme_color":"#2b1f4a","icons":[{"src":"icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}]}

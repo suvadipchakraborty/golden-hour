@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Radio Golden Hour</title>
+<meta name="description" content="Live local radio from wherever the sun is setting right now.">
+<meta name="theme-color" content="#2b1f4a">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icon.svg">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Radio Golden Hour">
+<meta property="og:description" content="Drift along the dusk line and listen to live local radio from cities at sunset.">
+<meta property="og:url" content="https://golden-hour.suvadipchakraborty.workers.dev/">
+<meta property="og:image" content="https://golden-hour.suvadipchakraborty.workers.dev/preview.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Radio Golden Hour">
+<meta name="twitter:description" content="Drift along the dusk line and listen to live local radio from cities at sunset.">
+<meta name="twitter:image" content="https://golden-hour.suvadipchakraborty.workers.dev/preview.png">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="sky-clear">
+<div id="sky"></div>
+<main>
+  <p class="eyebrow">Sunset right now</p>
+  <h1 id="city">Finding the dusk line…</h1>
+  <h2 id="country"></h2>
+  <p id="meta" class="badge"></p>
+  <div id="np" class="np">
+    <div id="viz" class="viz" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    <p id="station">—</p><p id="bitrate"></p>
+  </div>
+  <div class="controls">
+    <button id="station-btn" title="Change station" aria-label="Change station">⇄<span>Station</span></button>
+    <button id="play" class="play" aria-label="Play">▶</button>
+    <button id="drift" title="Drift west" aria-label="Drift west to next sunset">☾<span>Drift west</span></button>
+  </div>
+  <label class="vol">🔈 <input id="vol" type="range" min="0" max="1" step="0.01" value="0.8" aria-label="Volume"></label>
+  <div class="row">
+    <button id="install" class="pill" hidden>Save App to Home Screen</button>
+    <button id="share" class="pill">Share</button>
+  </div>
+  <p id="status" class="status" role="status"></p>
+</main>
+<footer>
+  <span>Built by Suva</span>
+  <a href="mailto:suvadipchakraborty@gmail.com?subject=Radio%20Golden%20Hour%20Feedback" aria-label="Send feedback">✉ Feedback</a>
+</footer>
+<audio id="audio" preload="none"></audio>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/suncalc/1.9.0/suncalc.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
